@@ -335,6 +335,14 @@
             <version>1.r.58</version>
             <scope>test</scope>
         </dependency>
+        
+                
+        <dependency>
+               <groupId>cn.enilu.tools</groupId>
+               <artifactId>nutzwk-code-generator</artifactId>
+               <version>1.1</version>
+        </dependency>
+        
     </dependencies>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
@@ -379,8 +387,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <arg>-parameters</arg>

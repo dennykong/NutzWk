@@ -69,11 +69,11 @@ public class WxUserController {
     @Ok("json")
     @RequiresPermissions("wx.user.list.sync")
     @SLog(tag = "同步微信会员", msg = "公众号:${args[1].getAttribute('appname')}")
-    public Object down(String wxid, HttpServletRequest req) {
+    public Object down(final String wxid, HttpServletRequest req) {
         try {
             Wx_config config = wxConfigService.fetch(wxid);
             req.setAttribute("appname", config.getAppname());
-            WxApi2 wxApi2 = wxConfigService.getWxApi2(wxid);
+          final  WxApi2 wxApi2 = wxConfigService.getWxApi2(wxid);
             wxApi2.user_get(new Each<String>() {
                 public void invoke(int index, String _ele, int length)
                         throws ExitLoop, ContinueLoop, LoopException {

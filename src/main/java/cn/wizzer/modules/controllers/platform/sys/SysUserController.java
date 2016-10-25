@@ -331,7 +331,7 @@ public class SysUserController {
                 user.setCustomMenus(menuService.query(Cnd.where("id", "in", ids.split(","))));
             } else {
                 user.setCustomMenu("");
-                user.setCustomMenus(new ArrayList<>());
+                user.setCustomMenus(new ArrayList<Sys_menu>());
             }
             return Result.success("system.success");
         } catch (Exception e) {
